@@ -15,7 +15,7 @@ checkfields=[["YDYHFLYJDM",'用地用海分类一级代码'],
              ["YDYHFLMC",''用地用海分类名称',"call(!BM_MC!)"]
             ]
 
-#基数转换三调-用地用海代码
+#基数转换三调-用地用海代码，可以外置TXT读取
 codeblock_JSZH = """
 def call(JSZH):
     A= {
@@ -79,7 +79,7 @@ def call(JSZH):
     y=A.get(A)
     return y"""
 
-#基数转换代码-名称
+#基数转换代码-名称，可以外置TXT读取
 codeblock_BM_MC = """ 
 def call(BM_MC):
     C= {
