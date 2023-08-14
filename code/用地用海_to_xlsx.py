@@ -26,7 +26,7 @@ def GetFieldValueList(inTable, inField):
 table = '输入的要素'
 
 s1, s1n = GetFieldValueList(
-    table, 'YDYHFLDM'), GetFieldValueList(table, 'YDYHFLMC')
+    table, 'YDYHFLDM'), GetFieldValueList(table, 'C')   #字典C见基数转换codeblock_BM_MC
 s2 = GetFieldValueList(table, 'Shape_Area')
 
 df = pd.DataFrame({'一级代码': None, '一级名称': None, '用地代码': s1, '用地名称': s1n, '面积': s2})
