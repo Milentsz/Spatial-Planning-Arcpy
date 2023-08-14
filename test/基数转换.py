@@ -265,3 +265,9 @@ arcpy.management.CalculateField(inTable, checkfield[0][3], "call(!DLBM!)", "PYTH
 arcpy.management.CalculateField(inTable, checkfield[0][1], !YDYHFLDM![0:2], "PYTHON3",)
 arcpy.management.CalculateField(inTable, checkfield[0][2], "call(!YDYHFLDM!)", "PYTHON3", codeblock_BM_MC)
 arcpy.management.CalculateField(inTable, checkfield[0][4], "call(!YDYHFLYJDM!)", "PYTHON3", codeblock_BM_MC)
+
+try:
+    arcpy.management.MatchLayerSymbologyToAStyle(os.path.basename(outFeatures), "$feature.YDYHFLMC", 
+                                             r"..\国土空间规划用地地类编码名称符号库.stylx")
+except:
+    pass
